@@ -1,0 +1,77 @@
+article{
+        position: relative;
+        height: 49px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       align-items: center; 
+       background-color: white; 
+       filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+       border-radius: 15.03px;
+       padding: 10px;
+       
+       
+       
+       
+       
+       .texting{
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        h2{
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21.09px;
+            margin: 0px;
+        }
+        p{
+            margin: 0px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 17.63px;
+        }
+       }
+       .prix{
+        padding-top: 20px;
+         p{
+            font-size: 15.04px;
+            font-weight:700;
+         }
+       }
+       input[type="checkbox"] {
+        display: none;
+        width: 100;
+    }
+    .selected{
+        display: block;
+        
+        width: 61px;
+        height: 69px;
+        margin-right: -10px;
+        margin-left: 0px;
+        border-radius: 0px 15px 15px 0px ;
+        background-color: var(--tertiaire-color);
+        color: white;
+        transition: right 1s;
+        i{
+            padding: 27px 0px 0px 20px;
+        }
+       }
+       
+       
+       #menu-toggle:checked ~ article .selected {
+        display: block; /* Afficher la section lorsqu'on clique sur le label */
+        animation: slideRight 1s; /* Ajouter l'animation de défilement vers la droite */
+    }
+    @keyframes slideRight {
+        from {
+            transform: translateX(100%); /* Déplacer la section en dehors de l'écran à droite */
+        }
+        to {
+            transform: translateX(0); /* Déplacer la section vers la position originale */
+        }
+    }
+    
+    }

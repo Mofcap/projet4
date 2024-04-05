@@ -1,0 +1,458 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+:root {
+  --primair-color:#9356DC;
+  --secondair-color:#FF79DA;
+  --tertiaire-color:#99E2D0;
+}
+
+img {
+  width: 100%;
+  height: 231px;
+}
+
+h1 {
+  size: 24px;
+  line-height: 28.13px;
+}
+
+p {
+  size: 48px;
+  line-height: 21.09px;
+}
+
+body {
+  max-width: 375px;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+header .logo {
+  height: 63px;
+  align-items: center;
+}
+header .logo img {
+  width: 197px;
+  height: 36px;
+}
+header a {
+  color: black;
+  padding: 30px 60px 0px 0px;
+  margin-left: -60px;
+  margin-top: -30px;
+}
+header .location {
+  background-color: #EAEAEA;
+}
+
+main {
+  max-width: 375px;
+}
+
+.info {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 55px;
+}
+.info button {
+  color: white;
+  border: 0px;
+  border-radius: 25px;
+  padding: 10px;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+}
+.info button:hover {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+}
+
+.fonctionemment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fonctionemment button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: roboto;
+  font-weight: bold;
+  color: black;
+  width: 335px;
+  border: 0px;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 20px;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+}
+.fonctionemment button span {
+  background-color: var(--primair-color);
+  border: 0px;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  padding: 10px 5px 0px 5px;
+  margin-left: -35px;
+  margin-right: 90px;
+  color: white;
+}
+.fonctionemment button i {
+  width: 18px;
+  height: 17.91px;
+  margin-left: -60px;
+  margin-right: 30px;
+  font-size: 18px;
+  color: #7E7E7E;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+}
+.restaurants a {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  border: 0px;
+  border-radius: 15px;
+}
+.restaurants a img {
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurants a article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+}
+.restaurants a article h1 {
+  margin: 0px;
+}
+.restaurants a article p {
+  margin: 0px;
+}
+.restaurants a article input[type=checkbox] {
+  display: none;
+}
+.restaurants a article .coeur {
+  cursor: pointer;
+  display: inline-block;
+}
+.restaurants a article .fa-regular {
+  font-size: 24px;
+}
+.restaurants a article .fa-solid {
+  display: none;
+  font-size: 24px;
+  color: transparent;
+  background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.restaurants a article #coeurCheckbox1:checked ~ label .fa-solid {
+  display: block;
+}
+.restaurants a article #coeurCheckbox1:checked ~ label .fa-regular {
+  display: none;
+}
+.restaurants a article #coeurCheckbox2:checked ~ label .fa-solid {
+  display: block;
+}
+.restaurants a article #coeurCheckbox2:checked ~ label .fa-regular {
+  display: none;
+}
+.restaurants a article #coeurCheckbox3:checked ~ label .fa-solid {
+  display: block;
+}
+.restaurants a article #coeurCheckbox3:checked ~ label .fa-regular {
+  display: none;
+}
+.restaurants a article #coeurCheckbox4:checked ~ label .fa-solid {
+  display: block;
+}
+.restaurants a article #coeurCheckbox4:checked ~ label .fa-regular {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: relative;
+  margin-top: -50px;
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0px 0px;
+}
+.menu .menu-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .menu-name .coeur {
+  cursor: pointer;
+  display: inline-block;
+}
+.menu .menu-name input[type=checkbox] {
+  display: none;
+}
+.menu .menu-name .fa-regular {
+  font-size: 24px;
+}
+.menu .menu-name .fa-solid {
+  display: none;
+  font-size: 24px;
+  color: transparent;
+  background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menu .menu-name #coeurCheckbox1:checked ~ label .fa-solid {
+  display: block;
+}
+.menu .menu-name #coeurCheckbox1:checked ~ label .fa-regular {
+  display: none;
+}
+.menu .menu-name #coeurCheckbox2:checked ~ label .fa-solid {
+  display: block;
+}
+.menu .menu-name #coeurCheckbox2:checked ~ label .fa-regular {
+  display: none;
+}
+.menu .menu-name #coeurCheckbox3:checked ~ label .fa-solid {
+  display: block;
+}
+.menu .menu-name #coeurCheckbox3:checked ~ label .fa-regular {
+  display: none;
+}
+.menu .menu-name #coeurCheckbox4:checked ~ label .fa-solid {
+  display: block;
+}
+.menu .menu-name #coeurCheckbox4:checked ~ label .fa-regular {
+  display: none;
+}
+.menu .border {
+  position: relative; /* Position relative pour permettre le positionnement absolu de la ligne */
+}
+.menu .border::after {
+  content: ""; /* Ajouter un contenu pour créer la ligne de soulignement */
+  position: absolute; /* Position absolue pour placer la ligne par rapport au texte */
+  left: 0; /* Positionner la ligne au début du texte */
+  bottom: -8px; /* Définir la distance entre le texte et la ligne */
+  width: 100%; /* Définir la largeur de la ligne */
+  height: 3px; /* Définir l'épaisseur de la ligne */
+  background-color: #99E2D0; /* Couleur de la ligne */
+}
+.menu .plates {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.menu .plates article input[type=checkbox] {
+  display: none;
+}
+.menu .plates article label {
+  position: relative;
+  height: 49px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+  border-radius: 15.03px;
+  padding: 10px;
+}
+.menu .plates article label .texting {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .plates article label .texting h2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21.09px;
+  margin: 0px;
+}
+.menu .plates article label .texting p {
+  margin: 0px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 17.63px;
+}
+.menu .plates article label .prix {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  margin-right: 0px;
+}
+.menu .plates article label .prix p {
+  margin-right: 10px;
+  font-size: 15.04px;
+  font-weight: 700;
+}
+.menu .plates article label .prix .selected {
+  display: block;
+  width: 61px;
+  height: 69px;
+  margin-top: -19px;
+  margin-right: -10px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: var(--tertiaire-color);
+  color: white;
+  transition: right 1s;
+}
+.menu .plates article label .prix .selected i {
+  padding: 27px 0px 0px 20px;
+}
+.menu .plates article #menu-toggle:checked ~ label > #selected1 {
+  display: block;
+  animation: slideRight 1s;
+}
+.menu .plates article #menu-toggle2:checked ~ label > #selected2 {
+  display: block;
+  animation: slideRight 1s;
+}
+.menu .plates article #menu-toggle3:checked ~ label > #selected3 {
+  display: block;
+  animation: slideRight 1s;
+}
+.menu .plates article #menu-toggle4:checked ~ label > #selected4 {
+  display: block;
+  animation: slideRight 1s;
+}
+.menu .plates article #menu-toggle5:checked ~ label > #selected5 {
+  display: block;
+  animation: slideRight 3s;
+}
+.menu .plates article #menu-toggle6:checked ~ label > #selected6 {
+  display: block;
+  animation: slideRight 1s;
+}
+.menu .plates article #menu-toggle7:checked ~ label > #selected7 {
+  display: block;
+  animation: slideRight 1s;
+}
+.menu .plates article #menu-toggle8:checked ~ label > #selected8 {
+  display: block;
+  animation: slideRight 1s;
+}
+.menu .plates article #menu-toggle9:checked ~ label > #selected9 {
+  display: block;
+  animation: slideRight 1s;
+}
+.menu .plates article #menu-toggle10:checked ~ label > #selected10 {
+  display: block;
+  animation: slideRight 1s;
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.menu button {
+  color: white;
+  width: 50%;
+  border: 0px;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 25%;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+}
+.menu button:hover {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+}
+
+footer {
+  color: white;
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  background-color: #353535;
+  margin-top: 20px;
+  padding: 22px 25px 22px 25px;
+}
+footer h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26.24px;
+}
+
+/*
+@media (min-width: 375px) {
+    body{
+        max-width: 1440px;
+        min-width: 375px;
+    }
+    main{
+        max-width: 100%;
+    }
+    .fonctionemment{
+        padding: 50px 180px 50px 180px;
+        .fonction-btn{
+           display: flex;
+           flex-direction: row;
+        }
+    }
+    .restaurants{
+        padding: 0px 180px 0px 180px;
+        .card{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 50px;
+            a{
+                width: 490px;
+            }
+        }
+    }
+    .photo{
+        img{
+            height: 383px;
+        }
+
+    }
+    .menu{
+        justify-content: center;
+        padding: 20px 200px 20px 200px;
+        .menu-name{
+            justify-content: center;
+            gap: 40px;
+        }
+    }
+    footer{
+        flex-direction: row-reverse;
+        gap: 16px;
+        padding: 30px 25px 30px 25px;
+        align-items: center;
+        h1{
+            font-size: 18px;
+            width: 400;
+        }
+        .footer-link{
+            a{
+                height: 19px;
+                i{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+*//*# sourceMappingURL=style.css.map */
