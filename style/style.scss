@@ -19,6 +19,7 @@ p{
 }
 body{
     max-width: 375px;
+    width: 100%;
     padding: 20px;
 }
 header{
@@ -45,9 +46,7 @@ header{
         background-color: #EAEAEA;
      }
 }
-main{
-    max-width: 375px;
-}
+
 .info{
     background-color: #F6F6F6;
     text-align: center;
@@ -343,9 +342,9 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
             font-weight:700;
          }
          .selected{
-            display: block;
             
-            width: 61px;
+            
+            width: 0px;
             height: 69px;
             margin-top: -19px;
             margin-right: -10px;
@@ -365,45 +364,36 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
        
     
     }
-    #menu-toggle:checked ~ label > #selected1 {
-        display: block; 
-        animation: slideRight 1s; 
+    #menu-toggle:checked ~ .prix > #selected1 {
+        width: 61px; 
+     
     }
-    #menu-toggle2:checked ~ label > #selected2 {
-        display: block; 
-        animation: slideRight 1s; 
+    #menu-toggle2:checked ~ .prix > #selected2 {
+        width: 61px; 
     }
-    #menu-toggle3:checked ~ label > #selected3 {
-        display: block; 
-        animation: slideRight 1s; 
+    #menu-toggle3:checked ~ .prix > #selected3 {
+        width: 61px; 
     }
-    #menu-toggle4:checked ~ label > #selected4 {
-        display: block; 
-        animation: slideRight 1s; 
+    #menu-toggle4:checked ~ .prix > #selected4 {
+        width: 61px;
     }
-    #menu-toggle5:checked ~ label > #selected5 {
-        display: block; 
-        animation: slideRight 3s; 
+    #menu-toggle5:checked ~ .prix > #selected5 {
+        width: 61px; 
     }
-    #menu-toggle6:checked ~ label > #selected6 {
-        display: block; 
-        animation: slideRight 1s;
+    #menu-toggle6:checked ~ .prix > #selected6 {
+        width: 61px;
     }
-    #menu-toggle7:checked ~ label > #selected7 {
-        display: block; 
-        animation: slideRight 1s; 
+    #menu-toggle7:checked ~ .prix > #selected7 {
+        width: 61px;
     }
-    #menu-toggle8:checked ~ label > #selected8 {
-        display: block; 
-        animation: slideRight 1s; 
+    #menu-toggle8:checked ~ .prix > #selected8 {
+        width: 61px; 
     }
-    #menu-toggle9:checked ~ label > #selected9 {
-        display: block; 
-        animation: slideRight 1s; 
+    #menu-toggle9:checked ~ .prix > #selected9 {
+        width: 61px; 
     }
-    #menu-toggle10:checked ~ label > #selected10 {
-        display: block; 
-        animation: slideRight 1s; 
+    #menu-toggle10:checked ~ .prix > #selected10 {
+        width: 61px; 
     }
     @keyframes slideRight {
         from {
@@ -452,13 +442,12 @@ footer{
 }
 /*
 @media (min-width: 375px) {
-    body{
+    body {
         max-width: 1440px;
+        width: 100%;
         min-width: 375px;
     }
-    main{
-        max-width: 100%;
-    }
+   
     .fonctionemment{
         padding: 50px 180px 50px 180px;
         .fonction-btn{
@@ -511,5 +500,5 @@ footer{
         }
     }
 }
-
 */
+
