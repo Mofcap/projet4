@@ -12,18 +12,14 @@ img {
 }
 
 h1 {
-  size: 24px;
   line-height: 28.13px;
 }
 
 p {
-  size: 48px;
   line-height: 21.09px;
 }
 
-body {
-  max-width: 375px;
-  width: 100%;
+body, html {
   padding: 20px;
 }
 
@@ -108,6 +104,7 @@ header .location {
 }
 
 .restaurants {
+  background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -119,34 +116,41 @@ header .location {
   color: black;
   border: 0px;
   border-radius: 15px;
+  margin: 0px 9px 0px 9px;
 }
 .restaurants a img {
+  width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
 .restaurants a article {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.restaurants a article .descript {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   padding: 0px 20px 0px 20px;
 }
-.restaurants a article h1 {
+.restaurants a article .descript h1 {
   margin: 0px;
 }
-.restaurants a article p {
+.restaurants a article .descript p {
   margin: 0px;
 }
-.restaurants a article input[type=checkbox] {
+.restaurants a article .descript input[type=checkbox] {
   display: none;
 }
-.restaurants a article .coeur {
+.restaurants a article .descript .coeur {
   cursor: pointer;
   display: inline-block;
+  margin-top: 10px;
 }
-.restaurants a article .fa-regular {
+.restaurants a article .descript .fa-regular {
   font-size: 24px;
 }
-.restaurants a article .fa-solid {
+.restaurants a article .descript .fa-solid {
   display: none;
   font-size: 24px;
   color: transparent;
@@ -154,28 +158,28 @@ header .location {
   -webkit-background-clip: text;
   background-clip: text;
 }
-.restaurants a article #coeurCheckbox1:checked ~ label .fa-solid {
+.restaurants a article .descript #coeurCheckbox1:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants a article #coeurCheckbox1:checked ~ label .fa-regular {
+.restaurants a article .descript #coeurCheckbox1:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants a article #coeurCheckbox2:checked ~ label .fa-solid {
+.restaurants a article .descript #coeurCheckbox2:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants a article #coeurCheckbox2:checked ~ label .fa-regular {
+.restaurants a article .descript #coeurCheckbox2:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants a article #coeurCheckbox3:checked ~ label .fa-solid {
+.restaurants a article .descript #coeurCheckbox3:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants a article #coeurCheckbox3:checked ~ label .fa-regular {
+.restaurants a article .descript #coeurCheckbox3:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants a article #coeurCheckbox4:checked ~ label .fa-solid {
+.restaurants a article .descript #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants a article #coeurCheckbox4:checked ~ label .fa-regular {
+.restaurants a article .descript #coeurCheckbox4:checked ~ label .fa-regular {
   display: none;
 }
 
@@ -305,41 +309,51 @@ header .location {
   margin-right: -10px;
   border-radius: 0px 15px 15px 0px;
   background-color: var(--tertiaire-color);
-  color: white;
-  transition: right 1s;
+  color: rgba(255, 255, 255, 0);
+  transition: width 1s;
 }
 .menu .plates article label .prix .selected i {
   padding: 27px 0px 0px 20px;
 }
 .menu .plates article #menu-toggle:checked ~ .prix > #selected1 {
   width: 61px;
+  color: white;
 }
 .menu .plates article #menu-toggle2:checked ~ .prix > #selected2 {
   width: 61px;
+  color: white;
 }
 .menu .plates article #menu-toggle3:checked ~ .prix > #selected3 {
   width: 61px;
+  color: white;
 }
 .menu .plates article #menu-toggle4:checked ~ .prix > #selected4 {
   width: 61px;
+  color: white;
 }
 .menu .plates article #menu-toggle5:checked ~ .prix > #selected5 {
   width: 61px;
+  color: white;
 }
 .menu .plates article #menu-toggle6:checked ~ .prix > #selected6 {
   width: 61px;
+  color: white;
 }
 .menu .plates article #menu-toggle7:checked ~ .prix > #selected7 {
   width: 61px;
+  color: white;
 }
 .menu .plates article #menu-toggle8:checked ~ .prix > #selected8 {
   width: 61px;
+  color: white;
 }
 .menu .plates article #menu-toggle9:checked ~ .prix > #selected9 {
   width: 61px;
+  color: white;
 }
 .menu .plates article #menu-toggle10:checked ~ .prix > #selected10 {
   width: 61px;
+  color: white;
 }
 @keyframes slideRight {
   from {
@@ -378,65 +392,96 @@ footer h1 {
   font-weight: 400;
   line-height: 26.24px;
 }
-
-/*
-@media (min-width: 375px) {
-    body {
-        max-width: 1440px;
-        width: 100%;
-        min-width: 375px;
-    }
-
-    .fonctionemment{
-        padding: 50px 180px 50px 180px;
-        .fonction-btn{
-           display: flex;
-           flex-direction: row;
-        }
-    }
-    .restaurants{
-        padding: 0px 180px 0px 180px;
-        .card{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 50px;
-            a{
-                width: 490px;
-            }
-        }
-    }
-    .photo{
-        img{
-            height: 383px;
-        }
-
-    }
-    .menu{
-        justify-content: center;
-        padding: 20px 200px 20px 200px;
-        .menu-name{
-            justify-content: center;
-            gap: 40px;
-        }
-    }
-    footer{
-        flex-direction: row-reverse;
-        gap: 16px;
-        padding: 30px 25px 30px 25px;
-        align-items: center;
-        h1{
-            font-size: 18px;
-            width: 400;
-        }
-        .footer-link{
-            a{
-                height: 19px;
-                i{
-                    margin-right: 5px;
-                }
-            }
-        }
-    }
+footer .footer-link {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-*//*# sourceMappingURL=style.css.map */
+footer .footer-link i {
+  margin-right: 15px;
+}
+footer .footer-link .fa-handshake-angle {
+  margin-right: 5px;
+}
+
+@media (max-width: 375px) {
+  body, html {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .fonctionemment {
+    width: 100%;
+    padding: 20px;
+  }
+  .fonctionemment .fonction-btn {
+    width: 100%;
+    flex-direction: column;
+  }
+  .fonctionemment .fonction-btn button {
+    width: 300px;
+    margin-left: 10px;
+  }
+  .restaurants {
+    padding: 20px;
+  }
+}
+@media (min-width: 375px) {
+  body, html {
+    width: 100%;
+    padding: 0px;
+  }
+  .fonctionemment {
+    padding: 50px 180px 50px 180px;
+  }
+  .fonctionemment .fonction-btn {
+    display: flex;
+    flex-direction: row;
+  }
+  .restaurants {
+    padding: 0px 180px 0px 180px;
+  }
+  .restaurants .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+  }
+  .restaurants .card a {
+    width: 100%;
+  }
+  .photo img {
+    height: 383px;
+  }
+  .menu {
+    justify-content: center;
+    padding: 20px 200px 20px 200px;
+  }
+  .menu .menu-name {
+    justify-content: center;
+    gap: 40px;
+  }
+  footer {
+    flex-direction: row-reverse;
+    gap: 16px;
+    padding: 30px 25px 30px 25px;
+    align-items: center;
+    padding: 30px 80px 20px 0px;
+  }
+  footer h1 {
+    font-size: 18px;
+    width: 400;
+  }
+  footer .footer-link {
+    flex-direction: row;
+    margin-right: 100px;
+  }
+  footer .footer-link a {
+    margin: 20px 50px 0px 0px;
+    height: 19px;
+  }
+  footer .footer-link a i {
+    margin-right: 5px;
+    margin-left: -50px;
+  }
+}/*# sourceMappingURL=style.css.map */
