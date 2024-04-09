@@ -110,7 +110,10 @@ header .location {
   gap: 18px;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
 }
-.restaurants a {
+.restaurants .card {
+  position: relative;
+}
+.restaurants .card a {
   text-decoration: none;
   background-color: white;
   color: black;
@@ -118,39 +121,57 @@ header .location {
   border-radius: 15px;
   margin: 0px 9px 0px 9px;
 }
-.restaurants a img {
+.restaurants .card a img {
   width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurants a article {
+.restaurants .card a article {
   background-color: white;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
-.restaurants a article .descript {
+.restaurants .card a article .new {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  padding: 0px;
+  background-color: var(--tertiaire-color);
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.restaurants .card a article .new h1 {
+  margin: 0px;
+  color: #008766;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.restaurants .card a article .descript {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0px 20px 0px 20px;
 }
-.restaurants a article .descript h1 {
+.restaurants .card a article .descript h1 {
   margin: 0px;
 }
-.restaurants a article .descript p {
+.restaurants .card a article .descript p {
   margin: 0px;
 }
-.restaurants a article .descript input[type=checkbox] {
+.restaurants .card a article .descript input[type=checkbox] {
   display: none;
 }
-.restaurants a article .descript .coeur {
+.restaurants .card a article .descript .coeur {
   cursor: pointer;
   display: inline-block;
   margin-top: 10px;
 }
-.restaurants a article .descript .fa-regular {
+.restaurants .card a article .descript .fa-regular {
   font-size: 24px;
 }
-.restaurants a article .descript .fa-solid {
+.restaurants .card a article .descript .fa-solid {
   display: none;
   font-size: 24px;
   color: transparent;
@@ -158,28 +179,28 @@ header .location {
   -webkit-background-clip: text;
   background-clip: text;
 }
-.restaurants a article .descript #coeurCheckbox1:checked ~ label .fa-solid {
+.restaurants .card a article .descript #coeurCheckbox1:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants a article .descript #coeurCheckbox1:checked ~ label .fa-regular {
+.restaurants .card a article .descript #coeurCheckbox1:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants a article .descript #coeurCheckbox2:checked ~ label .fa-solid {
+.restaurants .card a article .descript #coeurCheckbox2:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants a article .descript #coeurCheckbox2:checked ~ label .fa-regular {
+.restaurants .card a article .descript #coeurCheckbox2:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants a article .descript #coeurCheckbox3:checked ~ label .fa-solid {
+.restaurants .card a article .descript #coeurCheckbox3:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants a article .descript #coeurCheckbox3:checked ~ label .fa-regular {
+.restaurants .card a article .descript #coeurCheckbox3:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants a article .descript #coeurCheckbox4:checked ~ label .fa-solid {
+.restaurants .card a article .descript #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants a article .descript #coeurCheckbox4:checked ~ label .fa-regular {
+.restaurants .card a article .descript #coeurCheckbox4:checked ~ label .fa-regular {
   display: none;
 }
 
@@ -425,6 +446,9 @@ footer .footer-link .fa-handshake-angle {
   .restaurants {
     padding: 20px;
   }
+  .restaurants .new {
+    margin: 2% 0px 0% 72%;
+  }
 }
 @media (min-width: 375px) {
   body, html {
@@ -449,6 +473,9 @@ footer .footer-link .fa-handshake-angle {
   }
   .restaurants .card a {
     width: 100%;
+  }
+  .restaurants .card a article .new {
+    margin: 2% 0px 0% 82%;
   }
   .photo img {
     height: 383px;
