@@ -16,14 +16,21 @@ img {
 
 h1 {
   line-height: 28.13px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 p {
   line-height: 21.09px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 body, html {
   padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 header {
@@ -31,36 +38,55 @@ header {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding-top: 20px;
 }
 header .logo {
+  display: flex;
   height: 63px;
+  width: 100%;
   align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  z-index: 2;
 }
 header .logo img {
   width: 197px;
   height: 36px;
 }
-header a {
-  color: black;
-  padding: 30px 60px 0px 0px;
+header .logo a {
+  margin-right: 60px;
   margin-left: -60px;
-  margin-top: -30px;
+  color: #353535;
 }
 header .location {
   background-color: #EAEAEA;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #353535;
+  font-size: 13px;
+  line-height: 18.75px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  z-index: 1;
+}
+header .location i {
+  padding-right: 12px;
 }
 
 .info {
   background-color: #F6F6F6;
   text-align: center;
-  padding: 55px;
+  padding: 25px;
+}
+.info p {
+  color: #353535;
 }
 .info button {
   color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
   border: 0px;
   border-radius: 25px;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 15px;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 }
@@ -77,8 +103,9 @@ header .location {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: roboto;
-  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 550;
   color: black;
   width: 335px;
   border: 0px;
@@ -93,7 +120,7 @@ header .location {
   border-radius: 100%;
   height: 25px;
   width: 25px;
-  padding: 10px 5px 0px 5px;
+  padding: 5px;
   margin-left: -35px;
   margin-right: 90px;
   color: white;
@@ -163,9 +190,11 @@ header .location {
 }
 .restaurants .card a article .descript h1 {
   margin: 0px;
+  font-size: 18px;
 }
 .restaurants .card a article .descript p {
   margin: 0px;
+  font-size: 17px;
 }
 .restaurants .card a article .descript input[type=checkbox] {
   display: none;
@@ -220,11 +249,21 @@ header .location {
   background-color: #F6F6F6;
   border-radius: 50px 50px 0px 0px;
 }
+.menu h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
 .menu .menu-name {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.menu .menu-name h1 {
+  font-family: shrikhland;
+  font-style: italic;
+  font-size: 25px;
+  font-weight: 900;
 }
 .menu .menu-name .coeur {
   cursor: pointer;
@@ -308,7 +347,7 @@ header .location {
   text-overflow: ellipsis;
 }
 .menu .plates article label .texting h2 {
-  font-weight: bold;
+  font-weight: 550;
   font-size: 18px;
   line-height: 21.09px;
   margin: 0px;
@@ -396,10 +435,13 @@ header .location {
   width: 50%;
   border: 0px;
   border-radius: 25px;
-  padding: 10px;
+  padding: 15px;
   margin-left: 25%;
+  margin-bottom: 20px;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+  font-size: 16px;
+  font-weight: 500;
 }
 .menu button:hover {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
@@ -411,7 +453,6 @@ footer {
   gap: 7px;
   flex-direction: column;
   background-color: #353535;
-  margin-top: 20px;
   padding: 22px 25px 22px 25px;
 }
 footer h1 {
