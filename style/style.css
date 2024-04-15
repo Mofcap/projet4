@@ -33,6 +33,66 @@ body, html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #bbb6aa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: hideLoader 3s linear forwards;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 35px;
+  height: 80px;
+  position: relative;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px 5px;
+  border-top: 1px solid #bbb6aa;
+  border-bottom: 4px solid #bbb6aa;
+  background: linear-gradient(#612329 0 0) bottom no-repeat content-box, #e4e0d7;
+  mix-blend-mode: darken;
+  animation: l1 3s linear forwards;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: -18px calc(50% - 2px) 8px;
+  background: #eb6b3e;
+  transform-origin: bottom;
+  transform: rotate(8deg);
+}
+
+@keyframes l1 {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 100% 5%;
+  }
+}
+@keyframes hideLoader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
 header {
   display: flex;
   flex-direction: column;
@@ -61,6 +121,7 @@ header .location {
   background-color: #EAEAEA;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #353535;
+  height: 50px;
   font-size: 13px;
   line-height: 18.75px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
@@ -78,6 +139,10 @@ header .location i {
 .info p {
   color: #353535;
 }
+.info h1 {
+  width: 275px;
+  margin-left: 30px;
+}
 .info button {
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -86,6 +151,7 @@ header .location i {
   border: 0px;
   border-radius: 25px;
   padding: 10px 20px 10px 20px;
+  margin-top: 15px;
   margin-bottom: 15px;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
@@ -107,6 +173,7 @@ header .location i {
   font-size: 16px;
   font-weight: 550;
   color: black;
+  background-color: #F6F6F6;
   width: 335px;
   border: 0px;
   border-radius: 25px;
@@ -147,7 +214,7 @@ header .location i {
 .restaurants .card {
   position: relative;
 }
-.restaurants .card a {
+.restaurants .card .click {
   text-decoration: none;
   background-color: white;
   color: black;
@@ -155,17 +222,16 @@ header .location i {
   border-radius: 15px;
   margin: 0px 9px 0px 9px;
 }
-.restaurants .card a img {
+.restaurants .card .click img {
   width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurants .card a article {
+.restaurants .card .click article {
   background-color: white;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
-.restaurants .card a article .new {
+.restaurants .card .click article .new {
   display: flex;
   justify-content: center;
   position: absolute;
@@ -176,38 +242,38 @@ header .location i {
   border-radius: 2px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
-.restaurants .card a article .new h1 {
+.restaurants .card .click article .new h1 {
   margin: 0px;
   color: #008766;
   font-size: 14px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.restaurants .card a article .descript {
+.restaurants .card .click article .descript {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0px 20px 0px 20px;
+  padding: 20px 20px 20px 20px;
 }
-.restaurants .card a article .descript h1 {
+.restaurants .card .click article .descript h1 {
   margin: 0px;
   font-size: 18px;
 }
-.restaurants .card a article .descript p {
+.restaurants .card .click article .descript p {
   margin: 0px;
   font-size: 17px;
 }
-.restaurants .card a article .descript input[type=checkbox] {
+.restaurants .card .click article .descript input[type=checkbox] {
   display: none;
 }
-.restaurants .card a article .descript .coeur {
+.restaurants .card .click article .descript .coeur {
   cursor: pointer;
   display: inline-block;
   margin-top: 10px;
 }
-.restaurants .card a article .descript .fa-regular {
+.restaurants .card .click article .descript .fa-regular {
   font-size: 24px;
 }
-.restaurants .card a article .descript .fa-solid {
+.restaurants .card .click article .descript .fa-solid {
   display: none;
   font-size: 24px;
   color: transparent;
@@ -215,28 +281,28 @@ header .location i {
   -webkit-background-clip: text;
   background-clip: text;
 }
-.restaurants .card a article .descript #coeurCheckbox1:checked ~ label .fa-solid {
+.restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants .card a article .descript #coeurCheckbox1:checked ~ label .fa-regular {
+.restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants .card a article .descript #coeurCheckbox2:checked ~ label .fa-solid {
+.restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants .card a article .descript #coeurCheckbox2:checked ~ label .fa-regular {
+.restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants .card a article .descript #coeurCheckbox3:checked ~ label .fa-solid {
+.restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants .card a article .descript #coeurCheckbox3:checked ~ label .fa-regular {
+.restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants .card a article .descript #coeurCheckbox4:checked ~ label .fa-solid {
+.restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants .card a article .descript #coeurCheckbox4:checked ~ label .fa-regular {
+.restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-regular {
   display: none;
 }
 
@@ -252,6 +318,9 @@ header .location i {
 .menu h2 {
   font-size: 16px;
   font-weight: 300;
+}
+.menu .titree h2 {
+  text-transform: uppercase;
 }
 .menu .menu-name {
   display: flex;
@@ -324,11 +393,22 @@ header .location i {
   flex-direction: column;
   gap: 18px;
 }
+.menu .plates article {
+  opacity: 0;
+  animation: ls11 5s forwards;
+}
+@keyframes ls11 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .menu .plates article input[type=checkbox] {
   display: none;
 }
 .menu .plates article label {
-  position: relative;
   height: 49px;
   display: flex;
   flex-direction: row;
@@ -342,13 +422,13 @@ header .location i {
 .menu .plates article label .texting {
   display: flex;
   flex-direction: column;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .menu .plates article label .texting h2 {
   font-weight: 550;
   font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   line-height: 21.09px;
   margin: 0px;
 }
@@ -357,6 +437,9 @@ header .location i {
   font-size: 15px;
   font-weight: 300;
   line-height: 17.63px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .plates article label .prix {
   display: flex;
@@ -386,9 +469,18 @@ header .location i {
   width: 61px;
   color: white;
 }
+.menu .plates article #menu-toggle:checked ~ .prix > #text1 {
+  width: 40%;
+}
 .menu .plates article #menu-toggle2:checked ~ .prix > #selected2 {
   width: 61px;
   color: white;
+}
+.menu .plates article #menu-toggle2:checked + .texting {
+  width: 44%;
+}
+.menu .plates article #menu-toggle3:checked + .texting {
+  width: 44%;
 }
 .menu .plates article #menu-toggle3:checked ~ .prix > #selected3 {
   width: 61px;
@@ -398,29 +490,50 @@ header .location i {
   width: 61px;
   color: white;
 }
+.menu .plates article #menu-toggle4:checked + .texting {
+  width: 44%;
+}
 .menu .plates article #menu-toggle5:checked ~ .prix > #selected5 {
   width: 61px;
   color: white;
+}
+.menu .plates article #menu-toggle5:checked + .texting {
+  width: 44%;
 }
 .menu .plates article #menu-toggle6:checked ~ .prix > #selected6 {
   width: 61px;
   color: white;
 }
+.menu .plates article #menu-toggle6:checked + .texting {
+  width: 44%;
+}
 .menu .plates article #menu-toggle7:checked ~ .prix > #selected7 {
   width: 61px;
   color: white;
+}
+.menu .plates article #menu-toggle7:checked + .texting {
+  width: 44%;
 }
 .menu .plates article #menu-toggle8:checked ~ .prix > #selected8 {
   width: 61px;
   color: white;
 }
+.menu .plates article #menu-toggle8:checked + .texting {
+  width: 44%;
+}
 .menu .plates article #menu-toggle9:checked ~ .prix > #selected9 {
   width: 61px;
   color: white;
 }
+.menu .plates article #menu-toggle9:checked + .texting {
+  width: 44%;
+}
 .menu .plates article #menu-toggle10:checked ~ .prix > #selected10 {
   width: 61px;
   color: white;
+}
+.menu .plates article #menu-toggle10:checked + .texting {
+  width: 44%;
 }
 @keyframes slideRight {
   from {
@@ -494,14 +607,29 @@ footer .footer-link .fa-handshake-angle {
   .restaurants {
     padding: 20px;
   }
-  .restaurants .new {
-    margin: 2% 0px 0% 72%;
+  .restaurants .card .click {
+    margin: 15px 9px 15px 9px;
+    border-radius: 15px;
+  }
+  .restaurants .card .click article {
+    border-radius: 15px;
+  }
+  .restaurants .card .click article .new {
+    margin: 2% 0px 0% 67%;
   }
 }
 @media (min-width: 375px) {
   body, html {
     width: 100%;
+    height: 100%;
     padding: 0px;
+  }
+  header .logo a {
+    margin: 0% 40% 0% -40%;
+  }
+  .info h1 {
+    width: auto;
+    font-size: 40px;
   }
   .fonctionemment {
     padding: 50px 180px 50px 180px;
@@ -511,26 +639,46 @@ footer .footer-link .fa-handshake-angle {
     flex-direction: row;
   }
   .restaurants {
-    padding: 0px 180px 0px 180px;
+    padding: 0px 180px 80px 180px;
   }
   .restaurants .card {
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 50px;
+    gap: 120px 50px;
   }
-  .restaurants .card a {
+  .restaurants .card .click {
     width: 100%;
+    height: 251px;
   }
-  .restaurants .card a article .new {
-    margin: 2% 0px 0% 82%;
+  .restaurants .card .click article {
+    border-radius: 15px;
+  }
+  .restaurants .card .click article .new {
+    margin: 2% 30% 70% 39%;
+  }
+  .restaurants .card .click article img {
+    height: 231px;
+    -o-object-fit: cover;
+       object-fit: cover; /* Ajuste la taille de l'image pour couvrir l'ensemble de l'élément */
+    -o-object-position: center;
+       object-position: center; /* Centre l'image à l'intérieur de l'élément */
+  }
+  .photo {
+    width: 100%;
   }
   .photo img {
     height: 383px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .menu {
     justify-content: center;
     padding: 20px 200px 20px 200px;
+    margin-left: 10%;
+    width: 50%;
   }
   .menu .menu-name {
     justify-content: center;
@@ -539,7 +687,7 @@ footer .footer-link .fa-handshake-angle {
   footer {
     flex-direction: row-reverse;
     gap: 16px;
-    padding: 30px 25px 30px 25px;
+    margin-top: 50px;
     align-items: center;
     padding: 30px 80px 20px 0px;
   }
