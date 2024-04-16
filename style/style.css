@@ -29,11 +29,10 @@ p {
 }
 
 body, html {
-  padding: 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* HTML: <div class="loader"></div> */
 }
-
-.loader-wrapper {
+body .loader-wrapper, html .loader-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -46,15 +45,12 @@ body, html {
   z-index: 9999;
   animation: hideLoader 3s linear forwards;
 }
-
-/* HTML: <div class="loader"></div> */
-.loader {
+body .loader, html .loader {
   width: 35px;
   height: 80px;
   position: relative;
 }
-
-.loader:after {
+body .loader:after, html .loader:after {
   content: "";
   position: absolute;
   inset: 0;
@@ -65,8 +61,7 @@ body, html {
   mix-blend-mode: darken;
   animation: l1 3s linear forwards;
 }
-
-.loader:before {
+body .loader:before, html .loader:before {
   content: "";
   position: absolute;
   inset: -18px calc(50% - 2px) 8px;
@@ -74,7 +69,6 @@ body, html {
   transform-origin: bottom;
   transform: rotate(8deg);
 }
-
 @keyframes l1 {
   0% {
     background-size: 100% 100%;
@@ -93,13 +87,13 @@ body, html {
     z-index: -1;
   }
 }
-header {
+body header, html header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-header .logo {
+body header .logo, html header .logo {
   display: flex;
   height: 63px;
   width: 100%;
@@ -108,16 +102,16 @@ header .logo {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   z-index: 2;
 }
-header .logo img {
+body header .logo img, html header .logo img {
   width: 197px;
   height: 36px;
 }
-header .logo a {
+body header .logo a, html header .logo a {
   margin-right: 60px;
   margin-left: -60px;
   color: #353535;
 }
-header .location {
+body header .location, html header .location {
   background-color: #EAEAEA;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #353535;
@@ -127,11 +121,10 @@ header .location {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
   z-index: 1;
 }
-header .location i {
+body header .location i, html header .location i {
   padding-right: 12px;
 }
-
-.info {
+body .info, html .info {
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
@@ -139,13 +132,13 @@ header .location i {
   text-align: center;
   padding: 25px;
 }
-.info p {
+body .info p, html .info p {
   color: #353535;
 }
-.info h1 {
+body .info h1, html .info h1 {
   width: 275px;
 }
-.info button {
+body .info button, html .info button {
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -158,17 +151,21 @@ header .location i {
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 }
-.info button:hover {
+body .info button:hover, html .info button:hover {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 }
-
-.fonctionemment {
+body .fonctionemment, html .fonctionemment {
   width: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.fonctionemment button {
+body .fonctionemment .fonction-btn, html .fonctionemment .fonction-btn {
+  width: 100%;
+  flex-direction: column;
+}
+body .fonctionemment .fonction-btn button, html .fonctionemment .fonction-btn button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -184,7 +181,7 @@ header .location i {
   margin: 20px;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 }
-.fonctionemment button span {
+body .fonctionemment .fonction-btn button span, html .fonctionemment .fonction-btn button span {
   background-color: var(--primair-color);
   border: 0px;
   border-radius: 100%;
@@ -195,7 +192,7 @@ header .location i {
   margin-right: 90px;
   color: white;
 }
-.fonctionemment button i {
+body .fonctionemment .fonction-btn button i, html .fonctionemment .fonction-btn button i {
   width: 18px;
   height: 17.91px;
   margin-left: -60px;
@@ -203,38 +200,39 @@ header .location i {
   font-size: 18px;
   color: #7E7E7E;
 }
-.fonctionemment button:hover i {
+body .fonctionemment .fonction-btn button:hover i, html .fonctionemment .fonction-btn button:hover i {
   color: var(--primair-color);
 }
-
-.restaurants {
+body .restaurants, html .restaurants {
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
+  padding: 20px;
   gap: 18px;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
 }
-.restaurants .card {
+body .restaurants .card, html .restaurants .card {
   position: relative;
 }
-.restaurants .card .click {
+body .restaurants .card .click, html .restaurants .card .click {
   text-decoration: none;
   background-color: white;
   color: black;
   border: 0px;
   border-radius: 15px;
-  margin: 0px 9px 0px 9px;
+  margin: 15px 9px 15px 9px;
 }
-.restaurants .card .click img {
+body .restaurants .card .click img, html .restaurants .card .click img {
   width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurants .card .click article {
+body .restaurants .card .click article, html .restaurants .card .click article {
   background-color: white;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
 }
-.restaurants .card .click article .new {
+body .restaurants .card .click article .new, html .restaurants .card .click article .new {
   display: flex;
   justify-content: center;
   position: absolute;
@@ -246,38 +244,38 @@ header .location i {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   margin: 2% 0px 0% 75%;
 }
-.restaurants .card .click article .new h1 {
+body .restaurants .card .click article .new h1, html .restaurants .card .click article .new h1 {
   margin: 0px;
   color: #008766;
   font-size: 14px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.restaurants .card .click article .descript {
+body .restaurants .card .click article .descript, html .restaurants .card .click article .descript {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px 20px 20px 20px;
 }
-.restaurants .card .click article .descript h1 {
+body .restaurants .card .click article .descript h1, html .restaurants .card .click article .descript h1 {
   margin: 0px;
   font-size: 18px;
 }
-.restaurants .card .click article .descript p {
+body .restaurants .card .click article .descript p, html .restaurants .card .click article .descript p {
   margin: 0px;
   font-size: 17px;
 }
-.restaurants .card .click article .descript input[type=checkbox] {
+body .restaurants .card .click article .descript input[type=checkbox], html .restaurants .card .click article .descript input[type=checkbox] {
   display: none;
 }
-.restaurants .card .click article .descript .coeur {
+body .restaurants .card .click article .descript .coeur, html .restaurants .card .click article .descript .coeur {
   cursor: pointer;
   display: inline-block;
   margin-top: 10px;
 }
-.restaurants .card .click article .descript .fa-regular {
+body .restaurants .card .click article .descript .fa-regular, html .restaurants .card .click article .descript .fa-regular {
   font-size: 24px;
 }
-.restaurants .card .click article .descript .fa-solid {
+body .restaurants .card .click article .descript .fa-solid, html .restaurants .card .click article .descript .fa-solid {
   display: none;
   font-size: 24px;
   color: transparent;
@@ -285,32 +283,31 @@ header .location i {
   -webkit-background-clip: text;
   background-clip: text;
 }
-.restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-solid {
+body .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-solid, html .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-regular {
+body .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-regular, html .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-solid {
+body .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-solid, html .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-regular {
+body .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-regular, html .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-solid {
+body .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-solid, html .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-regular {
+body .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-regular, html .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-regular {
   display: none;
 }
-.restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-solid {
+body .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-solid, html .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
 }
-.restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-regular {
+body .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-regular, html .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-regular {
   display: none;
 }
-
-.menu {
+body .menu, html .menu {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -319,36 +316,36 @@ header .location i {
   background-color: #F6F6F6;
   border-radius: 50px 50px 0px 0px;
 }
-.menu h2 {
+body .menu h2, html .menu h2 {
   font-size: 16px;
   font-weight: 300;
 }
-.menu .titree h2 {
+body .menu .titree h2, html .menu .titree h2 {
   text-transform: uppercase;
 }
-.menu .menu-name {
+body .menu .menu-name, html .menu .menu-name {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.menu .menu-name h1 {
+body .menu .menu-name h1, html .menu .menu-name h1 {
   font-family: shrikhland;
   font-style: italic;
   font-size: 25px;
   font-weight: 900;
 }
-.menu .menu-name .coeur {
+body .menu .menu-name .coeur, html .menu .menu-name .coeur {
   cursor: pointer;
   display: inline-block;
 }
-.menu .menu-name input[type=checkbox] {
+body .menu .menu-name input[type=checkbox], html .menu .menu-name input[type=checkbox] {
   display: none;
 }
-.menu .menu-name .fa-regular {
+body .menu .menu-name .fa-regular, html .menu .menu-name .fa-regular {
   font-size: 24px;
 }
-.menu .menu-name .fa-solid {
+body .menu .menu-name .fa-solid, html .menu .menu-name .fa-solid {
   display: none;
   font-size: 24px;
   color: transparent;
@@ -356,34 +353,34 @@ header .location i {
   -webkit-background-clip: text;
   background-clip: text;
 }
-.menu .menu-name #coeurCheckbox1:checked ~ label .fa-solid {
+body .menu .menu-name #coeurCheckbox1:checked ~ label .fa-solid, html .menu .menu-name #coeurCheckbox1:checked ~ label .fa-solid {
   display: block;
 }
-.menu .menu-name #coeurCheckbox1:checked ~ label .fa-regular {
+body .menu .menu-name #coeurCheckbox1:checked ~ label .fa-regular, html .menu .menu-name #coeurCheckbox1:checked ~ label .fa-regular {
   display: none;
 }
-.menu .menu-name #coeurCheckbox2:checked ~ label .fa-solid {
+body .menu .menu-name #coeurCheckbox2:checked ~ label .fa-solid, html .menu .menu-name #coeurCheckbox2:checked ~ label .fa-solid {
   display: block;
 }
-.menu .menu-name #coeurCheckbox2:checked ~ label .fa-regular {
+body .menu .menu-name #coeurCheckbox2:checked ~ label .fa-regular, html .menu .menu-name #coeurCheckbox2:checked ~ label .fa-regular {
   display: none;
 }
-.menu .menu-name #coeurCheckbox3:checked ~ label .fa-solid {
+body .menu .menu-name #coeurCheckbox3:checked ~ label .fa-solid, html .menu .menu-name #coeurCheckbox3:checked ~ label .fa-solid {
   display: block;
 }
-.menu .menu-name #coeurCheckbox3:checked ~ label .fa-regular {
+body .menu .menu-name #coeurCheckbox3:checked ~ label .fa-regular, html .menu .menu-name #coeurCheckbox3:checked ~ label .fa-regular {
   display: none;
 }
-.menu .menu-name #coeurCheckbox4:checked ~ label .fa-solid {
+body .menu .menu-name #coeurCheckbox4:checked ~ label .fa-solid, html .menu .menu-name #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
 }
-.menu .menu-name #coeurCheckbox4:checked ~ label .fa-regular {
+body .menu .menu-name #coeurCheckbox4:checked ~ label .fa-regular, html .menu .menu-name #coeurCheckbox4:checked ~ label .fa-regular {
   display: none;
 }
-.menu .border {
+body .menu .border, html .menu .border {
   position: relative; /* Position relative pour permettre le positionnement absolu de la ligne */
 }
-.menu .border::after {
+body .menu .border::after, html .menu .border::after {
   content: ""; /* Ajouter un contenu pour créer la ligne de soulignement */
   position: absolute; /* Position absolue pour placer la ligne par rapport au texte */
   left: 0; /* Positionner la ligne au début du texte */
@@ -392,12 +389,12 @@ header .location i {
   height: 3px; /* Définir l'épaisseur de la ligne */
   background-color: #99E2D0; /* Couleur de la ligne */
 }
-.menu .plates {
+body .menu .plates, html .menu .plates {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-.menu .plates article {
+body .menu .plates article, html .menu .plates article {
   opacity: 0;
   animation: ls11 5s forwards;
 }
@@ -409,10 +406,10 @@ header .location i {
     opacity: 1;
   }
 }
-.menu .plates article input[type=checkbox] {
+body .menu .plates article input[type=checkbox], html .menu .plates article input[type=checkbox] {
   display: none;
 }
-.menu .plates article label {
+body .menu .plates article label, html .menu .plates article label {
   height: 49px;
   display: flex;
   flex-direction: row;
@@ -423,11 +420,11 @@ header .location i {
   border-radius: 15.03px;
   padding: 10px;
 }
-.menu .plates article label .texting {
+body .menu .plates article label .texting, html .menu .plates article label .texting {
   display: flex;
   flex-direction: column;
 }
-.menu .plates article label .texting h2 {
+body .menu .plates article label .texting h2, html .menu .plates article label .texting h2 {
   font-weight: 550;
   font-size: 18px;
   white-space: nowrap;
@@ -436,7 +433,7 @@ header .location i {
   line-height: 21.09px;
   margin: 0px;
 }
-.menu .plates article label .texting p {
+body .menu .plates article label .texting p, html .menu .plates article label .texting p {
   margin: 0px;
   font-size: 15px;
   font-weight: 300;
@@ -445,18 +442,18 @@ header .location i {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .plates article label .prix {
+body .menu .plates article label .prix, html .menu .plates article label .prix {
   display: flex;
   flex-direction: row;
   padding-top: 20px;
   margin-right: 0px;
 }
-.menu .plates article label .prix p {
+body .menu .plates article label .prix p, html .menu .plates article label .prix p {
   margin-right: 10px;
   font-size: 15.04px;
   font-weight: 700;
 }
-.menu .plates article label .prix .selected {
+body .menu .plates article label .prix .selected, html .menu .plates article label .prix .selected {
   width: 0px;
   height: 69px;
   margin-top: -19px;
@@ -466,77 +463,77 @@ header .location i {
   color: rgba(255, 255, 255, 0);
   transition: width 1s;
 }
-.menu .plates article label .prix .selected i {
+body .menu .plates article label .prix .selected i, html .menu .plates article label .prix .selected i {
   padding: 27px 0px 0px 20px;
 }
-.menu .plates article #menu-toggle:checked ~ .prix > #selected1 {
+body .menu .plates article #menu-toggle:checked ~ .prix > #selected1, html .menu .plates article #menu-toggle:checked ~ .prix > #selected1 {
   width: 61px;
   color: white;
 }
-.menu .plates article #menu-toggle:checked ~ .prix > #text1 {
+body .menu .plates article #menu-toggle:checked ~ .prix > #text1, html .menu .plates article #menu-toggle:checked ~ .prix > #text1 {
   width: 40%;
 }
-.menu .plates article #menu-toggle2:checked ~ .prix > #selected2 {
+body .menu .plates article #menu-toggle2:checked ~ .prix > #selected2, html .menu .plates article #menu-toggle2:checked ~ .prix > #selected2 {
   width: 61px;
   color: white;
 }
-.menu .plates article #menu-toggle2:checked + .texting {
+body .menu .plates article #menu-toggle2:checked + .texting, html .menu .plates article #menu-toggle2:checked + .texting {
   width: 44%;
 }
-.menu .plates article #menu-toggle3:checked + .texting {
+body .menu .plates article #menu-toggle3:checked + .texting, html .menu .plates article #menu-toggle3:checked + .texting {
   width: 44%;
 }
-.menu .plates article #menu-toggle3:checked ~ .prix > #selected3 {
+body .menu .plates article #menu-toggle3:checked ~ .prix > #selected3, html .menu .plates article #menu-toggle3:checked ~ .prix > #selected3 {
   width: 61px;
   color: white;
 }
-.menu .plates article #menu-toggle4:checked ~ .prix > #selected4 {
+body .menu .plates article #menu-toggle4:checked ~ .prix > #selected4, html .menu .plates article #menu-toggle4:checked ~ .prix > #selected4 {
   width: 61px;
   color: white;
 }
-.menu .plates article #menu-toggle4:checked + .texting {
+body .menu .plates article #menu-toggle4:checked + .texting, html .menu .plates article #menu-toggle4:checked + .texting {
   width: 44%;
 }
-.menu .plates article #menu-toggle5:checked ~ .prix > #selected5 {
+body .menu .plates article #menu-toggle5:checked ~ .prix > #selected5, html .menu .plates article #menu-toggle5:checked ~ .prix > #selected5 {
   width: 61px;
   color: white;
 }
-.menu .plates article #menu-toggle5:checked + .texting {
+body .menu .plates article #menu-toggle5:checked + .texting, html .menu .plates article #menu-toggle5:checked + .texting {
   width: 44%;
 }
-.menu .plates article #menu-toggle6:checked ~ .prix > #selected6 {
+body .menu .plates article #menu-toggle6:checked ~ .prix > #selected6, html .menu .plates article #menu-toggle6:checked ~ .prix > #selected6 {
   width: 61px;
   color: white;
 }
-.menu .plates article #menu-toggle6:checked + .texting {
+body .menu .plates article #menu-toggle6:checked + .texting, html .menu .plates article #menu-toggle6:checked + .texting {
   width: 44%;
 }
-.menu .plates article #menu-toggle7:checked ~ .prix > #selected7 {
+body .menu .plates article #menu-toggle7:checked ~ .prix > #selected7, html .menu .plates article #menu-toggle7:checked ~ .prix > #selected7 {
   width: 61px;
   color: white;
 }
-.menu .plates article #menu-toggle7:checked + .texting {
+body .menu .plates article #menu-toggle7:checked + .texting, html .menu .plates article #menu-toggle7:checked + .texting {
   width: 44%;
 }
-.menu .plates article #menu-toggle8:checked ~ .prix > #selected8 {
+body .menu .plates article #menu-toggle8:checked ~ .prix > #selected8, html .menu .plates article #menu-toggle8:checked ~ .prix > #selected8 {
   width: 61px;
   color: white;
 }
-.menu .plates article #menu-toggle8:checked + .texting {
+body .menu .plates article #menu-toggle8:checked + .texting, html .menu .plates article #menu-toggle8:checked + .texting {
   width: 44%;
 }
-.menu .plates article #menu-toggle9:checked ~ .prix > #selected9 {
+body .menu .plates article #menu-toggle9:checked ~ .prix > #selected9, html .menu .plates article #menu-toggle9:checked ~ .prix > #selected9 {
   width: 61px;
   color: white;
 }
-.menu .plates article #menu-toggle9:checked + .texting {
+body .menu .plates article #menu-toggle9:checked + .texting, html .menu .plates article #menu-toggle9:checked + .texting {
   width: 44%;
 }
-.menu .plates article #menu-toggle10:checked ~ .prix > #selected10 {
+body .menu .plates article #menu-toggle10:checked ~ .prix > #selected10, html .menu .plates article #menu-toggle10:checked ~ .prix > #selected10 {
   width: 61px;
   color: white;
 }
-.menu .plates article #menu-toggle10:checked + .texting {
+body .menu .plates article #menu-toggle10:checked + .texting, html .menu .plates article #menu-toggle10:checked + .texting {
   width: 44%;
 }
 @keyframes slideRight {
@@ -547,7 +544,7 @@ header .location i {
     transform: translateX(0);
   }
 }
-.menu button {
+body .menu button, html .menu button {
   color: white;
   width: 50%;
   border: 0px;
@@ -560,11 +557,10 @@ header .location i {
   font-size: 16px;
   font-weight: 500;
 }
-.menu button:hover {
+body .menu button:hover, html .menu button:hover {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 }
-
-footer {
+body footer, html footer {
   color: white;
   display: flex;
   gap: 7px;
@@ -572,141 +568,116 @@ footer {
   background-color: #353535;
   padding: 22px 25px 22px 25px;
 }
-footer h1 {
+body footer h1, html footer h1 {
   font-family: "Shrikhand";
   font-style: italic;
   font-weight: 400;
   line-height: 26.24px;
 }
-footer .footer-link {
+body footer .footer-link, html footer .footer-link {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-footer .footer-link a {
+body footer .footer-link a, html footer .footer-link a {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
-footer .footer-link a i {
+body footer .footer-link a i, html footer .footer-link a i {
   margin-right: 15px;
 }
-footer .footer-link a .fa-handshake-angle {
+body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-handshake-angle {
   margin-right: 5px;
 }
 
-@media (max-width: 750px) {
-  body, html {
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-  }
-  .fonctionemment {
-    width: 100%;
-    padding: 20px;
-  }
-  .fonctionemment .fonction-btn {
-    width: 100%;
-    flex-direction: column;
-  }
-  .restaurants {
-    padding: 20px;
-  }
-  .restaurants .card .click {
-    margin: 15px 9px 15px 9px;
-    border-radius: 15px;
-  }
-  .restaurants .card .click article {
-    border-radius: 15px;
-  }
-}
 @media (min-width: 750px) {
   body, html {
+    min-width: 750px;
     width: 100%;
-    height: 100%;
     padding: 0px;
   }
-  header .logo a {
+  body header .logo a, html header .logo a {
     margin: 0% 40% 0% -40%;
   }
-  .info h1 {
+  body .info h1, html .info h1 {
     width: auto;
     font-size: 40px;
   }
-  .fonctionemment {
+  body .fonctionemment, html .fonctionemment {
     padding: 0% 10% 0% 10%;
   }
-  .fonctionemment .fonction-btn {
+  body .fonctionemment .fonction-btn, html .fonctionemment .fonction-btn {
     display: flex;
     flex-direction: row;
   }
-  .fonctionemment .fonction-btn button {
+  body .fonctionemment .fonction-btn button, html .fonctionemment .fonction-btn button {
     width: 25%;
   }
-  .restaurants {
+  body .restaurants, html .restaurants {
     padding: 0% 10% 0% 10%;
   }
-  .restaurants .card {
+  body .restaurants .card, html .restaurants .card {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 50px 50px;
   }
-  .restaurants .card .click {
+  body .restaurants .card .click, html .restaurants .card .click {
     width: 100%;
   }
-  .restaurants .card .click article {
+  body .restaurants .card .click article, html .restaurants .card .click article {
     border-radius: 15px;
   }
-  .restaurants .card .click article .new {
+  body .restaurants .card .click article .new, html .restaurants .card .click article .new {
     margin: 2% 0% 70% 30%;
   }
-  .restaurants .card .click article img {
+  body .restaurants .card .click article img, html .restaurants .card .click article img {
     height: 231px;
     -o-object-fit: cover;
        object-fit: cover; /* Ajuste la taille de l'image pour couvrir l'ensemble de l'élément */
     -o-object-position: center;
        object-position: center; /* Centre l'image à l'intérieur de l'élément */
   }
-  .photo {
+  body .photo, html .photo {
     width: 100%;
   }
-  .photo img {
+  body .photo img, html .photo img {
     height: 383px;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .menu {
+  body .menu, html .menu {
     justify-content: center;
     padding: 20px 200px 20px 200px;
     margin-left: 10%;
     width: 50%;
   }
-  .menu .menu-name {
+  body .menu .menu-name, html .menu .menu-name {
     justify-content: center;
     gap: 40px;
   }
-  footer {
+  body footer, html footer {
     flex-direction: row-reverse;
     gap: 16px;
     margin-top: 50px;
     align-items: center;
     padding: 30px 80px 20px 0px;
   }
-  footer h1 {
+  body footer h1, html footer h1 {
     font-size: 18px;
     width: 400;
   }
-  footer .footer-link {
+  body footer .footer-link, html footer .footer-link {
     flex-direction: row;
     margin-right: 100px;
   }
-  footer .footer-link a {
+  body footer .footer-link a, html footer .footer-link a {
     margin: 20px 50px 0px 0px;
     height: 19px;
   }
-  footer .footer-link a i {
+  body footer .footer-link a i, html footer .footer-link a i {
     margin-right: 5px;
     margin-left: -50px;
   }
