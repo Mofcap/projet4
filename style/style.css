@@ -215,6 +215,8 @@ body .restaurants .card .click article, html .restaurants .card .click article {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
+  width: 100%;
+  position: relative;
 }
 body .restaurants .card .click article .new, html .restaurants .card .click article .new {
   display: flex;
@@ -226,7 +228,7 @@ body .restaurants .card .click article .new, html .restaurants .card .click arti
   height: 29px;
   border-radius: 2px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-  margin: 2% 0px 0% 71%;
+  margin: 2% 0% 0% 80%;
 }
 body .restaurants .card .click article .new h1, html .restaurants .card .click article .new h1 {
   margin: 0px;
@@ -620,7 +622,7 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
     border-radius: 15px;
   }
   body .restaurants .card .click article .new, html .restaurants .card .click article .new {
-    margin: 2% 0% 0% 40%;
+    margin: 2% 0% 0% 78%;
   }
   body .restaurants .card .click article img, html .restaurants .card .click article img {
     height: 231px;
