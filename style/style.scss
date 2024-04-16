@@ -253,13 +253,13 @@ body, html{
                     padding: 0px;
                     
                     background-color:var(--tertiaire-color) ;
-                    width: 80px;
+                    width: 26%;
                     height: 29px;
                     border-radius: 2px;
                     box-shadow: 0px 2px 4px 0px #00000026;
                     
     
-                        margin: 2% 0% 0% 80%;
+                        margin: 2% 0% 0% 70%;
                     
                     h1{
                         
@@ -793,9 +793,7 @@ body, html{
                         article{
                             
                             border-radius: 15px;
-                            .new{
-                                margin: 2% 0% 0% 78%;
-                            }
+                            
                             img{
                                 height: 231px;
                                 object-fit: cover; /* Ajuste la taille de l'image pour couvrir l'ensemble de l'élément */
