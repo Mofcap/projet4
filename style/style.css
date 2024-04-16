@@ -620,7 +620,7 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
     border-radius: 15px;
   }
   body .restaurants .card .click article .new, html .restaurants .card .click article .new {
-    margin: 2% 0% 70% 30%;
+    margin: 2% 0% 0% 40%;
   }
   body .restaurants .card .click article img, html .restaurants .card .click article img {
     height: 231px;
