@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 :root {
   --primair-color:#9356DC;
@@ -364,16 +363,16 @@ body .menu .menu-name #coeurCheckbox4:checked ~ label .fa-regular, html .menu .m
   display: none;
 }
 body .menu .border, html .menu .border {
-  position: relative; /* Position relative pour permettre le positionnement absolu de la ligne */
+  position: relative;
 }
 body .menu .border::after, html .menu .border::after {
-  content: ""; /* Ajouter un contenu pour créer la ligne de soulignement */
-  position: absolute; /* Position absolue pour placer la ligne par rapport au texte */
-  left: 0; /* Positionner la ligne au début du texte */
-  bottom: -8px; /* Définir la distance entre le texte et la ligne */
-  width: 100%; /* Définir la largeur de la ligne */
-  height: 3px; /* Définir l'épaisseur de la ligne */
-  background-color: #99E2D0; /* Couleur de la ligne */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background-color: #99E2D0;
 }
 body .menu .plates, html .menu .plates {
   display: flex;
@@ -462,7 +461,7 @@ body .menu .plates article #menu-toggle:checked ~ .prix > #selected1, html .menu
   width: 61px;
   color: white;
 }
-body .menu .plates article #menu-toggle:checked ~ .prix > #text1, html .menu .plates article #menu-toggle:checked ~ .prix > #text1 {
+body .menu .plates article #menu-toggle:checked + .texting, html .menu .plates article #menu-toggle:checked + .texting {
   width: 60%;
 }
 body .menu .plates article #menu-toggle2:checked ~ .prix > #selected2, html .menu .plates article #menu-toggle2:checked ~ .prix > #selected2 {
@@ -624,9 +623,9 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
   body .restaurants .card .click article img, html .restaurants .card .click article img {
     height: 231px;
     -o-object-fit: cover;
-       object-fit: cover; /* Ajuste la taille de l'image pour couvrir l'ensemble de l'élément */
+       object-fit: cover;
     -o-object-position: center;
-       object-position: center; /* Centre l'image à l'intérieur de l'élément */
+       object-position: center;
   }
   body .photo, html .photo {
     width: 100%;
