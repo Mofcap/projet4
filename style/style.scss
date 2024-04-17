@@ -517,6 +517,7 @@ body, html{
            
             display: flex;
             flex-direction: column;
+            width: 60%;
             
             
             h2{
@@ -577,27 +578,15 @@ body, html{
             color: white; 
          
         }
-        #menu-toggle:checked + .texting {
-            width: 60%;
-             
-         
-        }
+        
         
         
         #menu-toggle2:checked ~ .prix > #selected2 {
             width: 61px; 
             color: white; 
         }
-        #menu-toggle2:checked + .texting  {
-            width: 60%;
-             
-         
-        }
-        #menu-toggle3:checked + .texting  {
-            width: 60%;
-             
-         
-        }
+        
+        
         #menu-toggle3:checked ~ .prix > #selected3 {
             width: 61px;
             color: white;  
@@ -606,66 +595,38 @@ body, html{
             width: 61px;
             color: white; 
         }
-        #menu-toggle4:checked + .texting  {
-            width: 60%;
-             
-         
-        }
+        
         #menu-toggle5:checked ~ .prix > #selected5 {
             width: 61px; 
             color: white; 
         }
-        #menu-toggle5:checked + .texting  {
-            width: 60%;
-             
-         
-        }
+        
         #menu-toggle6:checked ~ .prix > #selected6 {
             width: 61px;
             color: white; 
         }
-        #menu-toggle6:checked + .texting  {
-            width: 60%;
-             
-         
-        }
+        
         #menu-toggle7:checked ~ .prix > #selected7 {
             width: 61px;
             color: white; 
         }
-        #menu-toggle7:checked + .texting  {
-            width: 60%;
-             
-         
-        }
+        
         #menu-toggle8:checked ~ .prix > #selected8 {
             width: 61px;
             color: white;  
         }
-        #menu-toggle8:checked + .texting  {
-            width: 60%;
-             
-         
-        }
+        
     
         #menu-toggle9:checked ~ .prix > #selected9 {
             width: 61px; 
             color: white; 
         }
-        #menu-toggle9:checked + .texting  {
-            width: 60%;
-             
-         
-        }
+       
         #menu-toggle10:checked ~ .prix > #selected10 {
             width: 61px; 
             color: white; 
         }
-        #menu-toggle10:checked + .texting  {
-            width: 60%;
-             
-         
-        }
+        
         @keyframes slideRight {
             from {
                 transform: translateX(100%); 

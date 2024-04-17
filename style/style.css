@@ -414,6 +414,7 @@ body .menu .plates article label, html .menu .plates article label {
 body .menu .plates article label .texting, html .menu .plates article label .texting {
   display: flex;
   flex-direction: column;
+  width: 60%;
 }
 body .menu .plates article label .texting h2, html .menu .plates article label .texting h2 {
   font-weight: 550;
@@ -461,18 +462,9 @@ body .menu .plates article #menu-toggle:checked ~ .prix > #selected1, html .menu
   width: 61px;
   color: white;
 }
-body .menu .plates article #menu-toggle:checked + .texting, html .menu .plates article #menu-toggle:checked + .texting {
-  width: 60%;
-}
 body .menu .plates article #menu-toggle2:checked ~ .prix > #selected2, html .menu .plates article #menu-toggle2:checked ~ .prix > #selected2 {
   width: 61px;
   color: white;
-}
-body .menu .plates article #menu-toggle2:checked + .texting, html .menu .plates article #menu-toggle2:checked + .texting {
-  width: 60%;
-}
-body .menu .plates article #menu-toggle3:checked + .texting, html .menu .plates article #menu-toggle3:checked + .texting {
-  width: 60%;
 }
 body .menu .plates article #menu-toggle3:checked ~ .prix > #selected3, html .menu .plates article #menu-toggle3:checked ~ .prix > #selected3 {
   width: 61px;
@@ -482,50 +474,29 @@ body .menu .plates article #menu-toggle4:checked ~ .prix > #selected4, html .men
   width: 61px;
   color: white;
 }
-body .menu .plates article #menu-toggle4:checked + .texting, html .menu .plates article #menu-toggle4:checked + .texting {
-  width: 60%;
-}
 body .menu .plates article #menu-toggle5:checked ~ .prix > #selected5, html .menu .plates article #menu-toggle5:checked ~ .prix > #selected5 {
   width: 61px;
   color: white;
-}
-body .menu .plates article #menu-toggle5:checked + .texting, html .menu .plates article #menu-toggle5:checked + .texting {
-  width: 60%;
 }
 body .menu .plates article #menu-toggle6:checked ~ .prix > #selected6, html .menu .plates article #menu-toggle6:checked ~ .prix > #selected6 {
   width: 61px;
   color: white;
 }
-body .menu .plates article #menu-toggle6:checked + .texting, html .menu .plates article #menu-toggle6:checked + .texting {
-  width: 60%;
-}
 body .menu .plates article #menu-toggle7:checked ~ .prix > #selected7, html .menu .plates article #menu-toggle7:checked ~ .prix > #selected7 {
   width: 61px;
   color: white;
-}
-body .menu .plates article #menu-toggle7:checked + .texting, html .menu .plates article #menu-toggle7:checked + .texting {
-  width: 60%;
 }
 body .menu .plates article #menu-toggle8:checked ~ .prix > #selected8, html .menu .plates article #menu-toggle8:checked ~ .prix > #selected8 {
   width: 61px;
   color: white;
 }
-body .menu .plates article #menu-toggle8:checked + .texting, html .menu .plates article #menu-toggle8:checked + .texting {
-  width: 60%;
-}
 body .menu .plates article #menu-toggle9:checked ~ .prix > #selected9, html .menu .plates article #menu-toggle9:checked ~ .prix > #selected9 {
   width: 61px;
   color: white;
 }
-body .menu .plates article #menu-toggle9:checked + .texting, html .menu .plates article #menu-toggle9:checked + .texting {
-  width: 60%;
-}
 body .menu .plates article #menu-toggle10:checked ~ .prix > #selected10, html .menu .plates article #menu-toggle10:checked ~ .prix > #selected10 {
   width: 61px;
   color: white;
-}
-body .menu .plates article #menu-toggle10:checked + .texting, html .menu .plates article #menu-toggle10:checked + .texting {
-  width: 60%;
 }
 @keyframes slideRight {
   from {
