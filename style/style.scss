@@ -520,7 +520,7 @@ body, html{
             width: 60%;
             
             
-            h2{
+            .h2text{
                 font-weight: 550;
                 font-size: 18px;
                 white-space: nowrap;
@@ -529,7 +529,7 @@ body, html{
                 line-height: 21.09px;
                 margin: 0px;
             }
-            p{
+            .ptext{
                 margin: 0px;
                 font-size: 15px;
                 font-weight: 300;
@@ -545,7 +545,7 @@ body, html{
             padding-top: 20px;
             margin-right: 0px;
             
-             p{
+             .ptext{
                 margin-right: 10px;
                 font-size: 15.04px;
                 font-weight:700;

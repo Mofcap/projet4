@@ -416,7 +416,7 @@ body .menu .plates article label .texting, html .menu .plates article label .tex
   flex-direction: column;
   width: 60%;
 }
-body .menu .plates article label .texting h2, html .menu .plates article label .texting h2 {
+body .menu .plates article label .texting .h2text, html .menu .plates article label .texting .h2text {
   font-weight: 550;
   font-size: 18px;
   white-space: nowrap;
@@ -425,7 +425,7 @@ body .menu .plates article label .texting h2, html .menu .plates article label .
   line-height: 21.09px;
   margin: 0px;
 }
-body .menu .plates article label .texting p, html .menu .plates article label .texting p {
+body .menu .plates article label .texting .ptext, html .menu .plates article label .texting .ptext {
   margin: 0px;
   font-size: 15px;
   font-weight: 300;
@@ -440,7 +440,7 @@ body .menu .plates article label .prix, html .menu .plates article label .prix {
   padding-top: 20px;
   margin-right: 0px;
 }
-body .menu .plates article label .prix p, html .menu .plates article label .prix p {
+body .menu .plates article label .prix .ptext, html .menu .plates article label .prix .ptext {
   margin-right: 10px;
   font-size: 15.04px;
   font-weight: 700;
