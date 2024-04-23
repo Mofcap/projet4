@@ -48,7 +48,7 @@ body .loader, html .loader {
   width: 120px;
   height: 20px;
   -webkit-mask: linear-gradient(90deg, #000 70%, rgba(0, 0, 0, 0) 0) 0/20%;
-  background: linear-gradient(#000 0 0) 0/0% no-repeat #ddd;
+  background: linear-gradient(#000 0 0, #000 120%) 0/0% no-repeat, #ddd;
   animation: l4 3s steps(6);
 }
 @keyframes l4 {
@@ -677,7 +677,6 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
   }
   body footer h1, html footer h1 {
     font-size: 18px;
-    width: 400;
   }
   body footer .footer-link, html footer .footer-link {
     flex-direction: row;
