@@ -458,6 +458,7 @@ body .menu .plates article label .prix .selected, html .menu .plates article lab
   border-radius: 0px 15px 15px 0px;
   background-color: var(--tertiaire-color);
   color: rgba(255, 255, 255, 0);
+  overflow: hidden;
   transition: width 1s;
 }
 body .menu .plates article label .prix .selected i, html .menu .plates article label .prix .selected i {

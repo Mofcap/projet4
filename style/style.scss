@@ -542,6 +542,7 @@ body, html{
                 border-radius: 0px 15px 15px 0px ;
                 background-color: var(--tertiaire-color);
                 color: rgba(255, 255, 255, 0);
+                overflow: hidden;
                 transition: width 1s;
                 i{
                     padding: 27px 0px 0px 20px;
