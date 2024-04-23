@@ -597,6 +597,9 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
   body header .logo a, html header .logo a {
     margin: 0% 35% 0% -35%;
   }
+  body .first, html .first {
+    width: 100%;
+  }
   body .info h1, html .info h1 {
     width: auto;
     font-size: 40px;
