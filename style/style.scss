@@ -294,6 +294,7 @@ body, html{
                     cursor: pointer; 
                     display: inline-block; 
                     margin-top: 10px;
+                    
                 }
                 .fa-regular{
                     font-size: 24px; 
@@ -306,40 +307,31 @@ body, html{
                     color: transparent;
                     background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
                     -webkit-background-clip: text;
-                    background-clip: text;
+                    background-clip: text;animation: live 3s forwards;
                 }   
-                #coeurCheckbox1:checked ~ label  .fa-solid {
-                    display: block; 
-                     
+                @keyframes live {
+                    0% {
+                        clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
+                    }
+                    100% {
+                        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                    }
                 }
-                #coeurCheckbox1:checked ~ label  .fa-regular {
-                    display: none; 
-                     
-                }
-                #coeurCheckbox2:checked ~ label  .fa-solid {
-                    display: block; 
-                     
-                }
-                #coeurCheckbox2:checked ~ label  .fa-regular {
-                    display: none; 
-                     
-                }
-                #coeurCheckbox3:checked ~ label  .fa-solid {
-                    display: block; 
-                     
-                }
-                #coeurCheckbox3:checked ~ label  .fa-regular {
-                    display: none; 
-                     
-                }
-                #coeurCheckbox4:checked ~ label  .fa-solid {
-                    display: block; 
-                     
-                }
-                #coeurCheckbox4:checked ~ label  .fa-regular {
-                    display: none; 
-                     
-                }
+                
+    
+               
+                #coeurCheckbox1:checked ~ label .fa-solid,
+    #coeurCheckbox2:checked ~ label .fa-solid,
+    #coeurCheckbox3:checked ~ label .fa-solid,
+    #coeurCheckbox4:checked ~ label .fa-solid {
+        display: block;
+    }
+    #coeurCheckbox1:checked ~ label .fa-regular,
+    #coeurCheckbox2:checked ~ label .fa-regular,
+    #coeurCheckbox3:checked ~ label .fa-regular,
+    #coeurCheckbox4:checked ~ label .fa-regular {
+        display: none;
+    }
             }
     
     
@@ -404,6 +396,7 @@ body, html{
             
             .fa-regular{
                 font-size: 24px; 
+               
                 
                 
                 }
@@ -414,39 +407,31 @@ body, html{
                 background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
                 -webkit-background-clip: text;
                 background-clip: text;
+                animation: live 3s forwards;
             }   
-            #coeurCheckbox1:checked ~ label  .fa-solid {
-                display: block; 
-                 
+            @keyframes live {
+                0% {
+                    clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
+                }
+                100% {
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                }
             }
-            #coeurCheckbox1:checked ~ label  .fa-regular {
-                display: none; 
-                 
-            }
-            #coeurCheckbox2:checked ~ label  .fa-solid {
-                display: block; 
-                 
-            }
-            #coeurCheckbox2:checked ~ label  .fa-regular {
-                display: none; 
-                 
-            }
-            #coeurCheckbox3:checked ~ label  .fa-solid {
-                display: block; 
-                 
-            }
-            #coeurCheckbox3:checked ~ label  .fa-regular {
-                display: none; 
-                 
-            }
-            #coeurCheckbox4:checked ~ label  .fa-solid {
-                display: block; 
-                 
-            }
-            #coeurCheckbox4:checked ~ label  .fa-regular {
-                display: none; 
-                 
-            }
+            
+
+           
+            #coeurCheckbox1:checked ~ label .fa-solid,
+#coeurCheckbox2:checked ~ label .fa-solid,
+#coeurCheckbox3:checked ~ label .fa-solid,
+#coeurCheckbox4:checked ~ label .fa-solid {
+    display: block;
+}
+#coeurCheckbox1:checked ~ label .fa-regular,
+#coeurCheckbox2:checked ~ label .fa-regular,
+#coeurCheckbox3:checked ~ label .fa-regular,
+#coeurCheckbox4:checked ~ label .fa-regular {
+    display: none;
+}
         }
         .border {
             position: relative;
@@ -778,6 +763,12 @@ body, html{
                                 object-fit: cover; 
             object-position: center; 
                             }
+                            .coeur:hover .fa-regular {
+                                display: none;
+                            }
+                            .coeur:hover .fa-solid {
+                                display: block;
+                            }
                             
                         }
                     }
@@ -800,6 +791,12 @@ body, html{
                 .menu-name{
                     justify-content: center;
                     gap: 40px;
+                    .coeur:hover .fa-regular {
+                        display: none;
+                    }
+                    .coeur:hover .fa-solid {
+                        display: block;
+                    }
                 }
             }
             footer{

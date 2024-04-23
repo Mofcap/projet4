@@ -268,29 +268,34 @@ body .restaurants .card .click article .descript .fa-solid, html .restaurants .c
   background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  animation: live 3s forwards;
 }
-body .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-solid, html .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-solid {
+@keyframes live {
+  0% {
+    -webkit-clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
+            clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+body .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-solid,
+body .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-solid,
+body .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-solid,
+body .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-solid, html .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-solid,
+html .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-solid,
+html .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-solid,
+html .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
 }
-body .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-regular, html .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-regular {
-  display: none;
-}
-body .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-solid, html .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-solid {
-  display: block;
-}
-body .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-regular, html .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-regular {
-  display: none;
-}
-body .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-solid, html .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-solid {
-  display: block;
-}
-body .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-regular, html .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-regular {
-  display: none;
-}
-body .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-solid, html .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-solid {
-  display: block;
-}
-body .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-regular, html .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-regular {
+body .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-regular,
+body .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-regular,
+body .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-regular,
+body .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-regular, html .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-regular,
+html .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-regular,
+html .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-regular,
+html .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-regular {
   display: none;
 }
 body .menu, html .menu {
@@ -338,29 +343,34 @@ body .menu .menu-name .fa-solid, html .menu .menu-name .fa-solid {
   background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  animation: live 3s forwards;
 }
-body .menu .menu-name #coeurCheckbox1:checked ~ label .fa-solid, html .menu .menu-name #coeurCheckbox1:checked ~ label .fa-solid {
+@keyframes live {
+  0% {
+    -webkit-clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
+            clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+body .menu .menu-name #coeurCheckbox1:checked ~ label .fa-solid,
+body .menu .menu-name #coeurCheckbox2:checked ~ label .fa-solid,
+body .menu .menu-name #coeurCheckbox3:checked ~ label .fa-solid,
+body .menu .menu-name #coeurCheckbox4:checked ~ label .fa-solid, html .menu .menu-name #coeurCheckbox1:checked ~ label .fa-solid,
+html .menu .menu-name #coeurCheckbox2:checked ~ label .fa-solid,
+html .menu .menu-name #coeurCheckbox3:checked ~ label .fa-solid,
+html .menu .menu-name #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
 }
-body .menu .menu-name #coeurCheckbox1:checked ~ label .fa-regular, html .menu .menu-name #coeurCheckbox1:checked ~ label .fa-regular {
-  display: none;
-}
-body .menu .menu-name #coeurCheckbox2:checked ~ label .fa-solid, html .menu .menu-name #coeurCheckbox2:checked ~ label .fa-solid {
-  display: block;
-}
-body .menu .menu-name #coeurCheckbox2:checked ~ label .fa-regular, html .menu .menu-name #coeurCheckbox2:checked ~ label .fa-regular {
-  display: none;
-}
-body .menu .menu-name #coeurCheckbox3:checked ~ label .fa-solid, html .menu .menu-name #coeurCheckbox3:checked ~ label .fa-solid {
-  display: block;
-}
-body .menu .menu-name #coeurCheckbox3:checked ~ label .fa-regular, html .menu .menu-name #coeurCheckbox3:checked ~ label .fa-regular {
-  display: none;
-}
-body .menu .menu-name #coeurCheckbox4:checked ~ label .fa-solid, html .menu .menu-name #coeurCheckbox4:checked ~ label .fa-solid {
-  display: block;
-}
-body .menu .menu-name #coeurCheckbox4:checked ~ label .fa-regular, html .menu .menu-name #coeurCheckbox4:checked ~ label .fa-regular {
+body .menu .menu-name #coeurCheckbox1:checked ~ label .fa-regular,
+body .menu .menu-name #coeurCheckbox2:checked ~ label .fa-regular,
+body .menu .menu-name #coeurCheckbox3:checked ~ label .fa-regular,
+body .menu .menu-name #coeurCheckbox4:checked ~ label .fa-regular, html .menu .menu-name #coeurCheckbox1:checked ~ label .fa-regular,
+html .menu .menu-name #coeurCheckbox2:checked ~ label .fa-regular,
+html .menu .menu-name #coeurCheckbox3:checked ~ label .fa-regular,
+html .menu .menu-name #coeurCheckbox4:checked ~ label .fa-regular {
   display: none;
 }
 body .menu .border, html .menu .border {
@@ -616,6 +626,12 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
     -o-object-position: center;
        object-position: center;
   }
+  body .restaurants .card .click article .coeur:hover .fa-regular, html .restaurants .card .click article .coeur:hover .fa-regular {
+    display: none;
+  }
+  body .restaurants .card .click article .coeur:hover .fa-solid, html .restaurants .card .click article .coeur:hover .fa-solid {
+    display: block;
+  }
   body .photo, html .photo {
     width: 100%;
   }
@@ -634,6 +650,12 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
   body .menu .menu-name, html .menu .menu-name {
     justify-content: center;
     gap: 40px;
+  }
+  body .menu .menu-name .coeur:hover .fa-regular, html .menu .menu-name .coeur:hover .fa-regular {
+    display: none;
+  }
+  body .menu .menu-name .coeur:hover .fa-solid, html .menu .menu-name .coeur:hover .fa-solid {
+    display: block;
   }
   body footer, html footer {
     flex-direction: row-reverse;
