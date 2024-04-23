@@ -135,7 +135,8 @@ body .info button, html .info button {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 }
 body .info button:hover, html .info button:hover {
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background-image: linear-gradient(to bottom, #FF94E5, #A979E5);
+  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.4));
 }
 body .fonctionemment, html .fonctionemment {
   width: 100%;
@@ -536,7 +537,8 @@ body .menu button, html .menu button {
   font-weight: 500;
 }
 body .menu button:hover, html .menu button:hover {
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background-image: linear-gradient(to bottom, #FF94E5, #A979E5);
+  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.4));
 }
 body footer, html footer {
   color: white;
