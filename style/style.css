@@ -586,9 +586,16 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
     min-width: 750px;
     width: 100%;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body header, html header {
+    width: 100%;
   }
   body header .logo a, html header .logo a {
-    margin: 0% 40% 0% -40%;
+    margin: 0% 35% 0% -35%;
   }
   body .info h1, html .info h1 {
     width: auto;
@@ -645,7 +652,6 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
   body .menu, html .menu {
     justify-content: center;
     padding: 20px 200px 20px 200px;
-    margin-left: 15%;
     width: 50%;
   }
   body .menu .menu-name, html .menu .menu-name {
@@ -659,6 +665,7 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
     display: block;
   }
   body footer, html footer {
+    width: 100%;
     flex-direction: row-reverse;
     gap: 16px;
     margin-top: 50px;
