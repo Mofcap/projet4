@@ -169,7 +169,7 @@ body .fonctionemment .fonction-btn button span, html .fonctionemment .fonction-b
   border: 0px;
   border-radius: 100%;
   height: 25px;
-  width: 7%;
+  width: 25px;
   padding: 5px;
   margin-left: -35px;
   margin-right: 90px;
@@ -183,7 +183,7 @@ body .fonctionemment .fonction-btn button i, html .fonctionemment .fonction-btn 
   font-size: 18px;
   color: #7E7E7E;
 }
-body .fonctionemment .fonction-btn button:hover i, html .fonctionemment .fonction-btn button:hover i {
+body .fonctionemment .fonction-btn button .fa-store, html .fonctionemment .fonction-btn button .fa-store {
   color: var(--primair-color);
 }
 body .restaurants, html .restaurants {
