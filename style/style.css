@@ -591,6 +591,9 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
     justify-content: center;
     align-items: center;
   }
+  body main, html main {
+    width: 100%;
+  }
   body header, html header {
     width: 100%;
   }
@@ -605,11 +608,15 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
     font-size: 40px;
   }
   body .fonctionemment, html .fonctionemment {
-    padding: 0% 10% 0% 10%;
+    padding-left: 10%;
+    width: 90%;
+    justify-content: flex-start;
   }
   body .fonctionemment .fonction-btn, html .fonctionemment .fonction-btn {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
   }
   body .fonctionemment .fonction-btn button, html .fonctionemment .fonction-btn button {
     width: 25%;
@@ -672,7 +679,7 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
     color: white;
   }
   body footer, html footer {
-    width: 100%;
+    width: 95%;
     flex-direction: row-reverse;
     gap: 16px;
     margin-top: 50px;

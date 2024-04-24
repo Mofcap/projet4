@@ -715,6 +715,9 @@ body, html{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        main{
+            width: 100%;
+        }
         header{
             width: 100%;
             .logo{
@@ -733,12 +736,20 @@ body, html{
             }
            }
             .fonctionemment{
-                padding: 0% 10% 0% 10%;
+                padding-left: 10%;
+                width: 90%;
                 
+                justify-content: flex-start;
                    
                 .fonction-btn{
                    display: flex;
                    flex-direction: row;
+                   justify-content: space-between;
+                   
+                   
+                   width: 90%;
+                   
+                   
                    button{
                     width: 25%;
         
@@ -821,7 +832,7 @@ body, html{
                     }
             }
             footer{
-                width: 100%;
+                width: 95%;
                 flex-direction: row-reverse;
                 gap: 16px;
                 margin-top: 50px;
