@@ -412,8 +412,8 @@ body .menu .plates article label, html .menu .plates article label {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
   border-radius: 15.03px;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
   padding: 10px;
 }
 body .menu .plates article label .texting, html .menu .plates article label .texting {
@@ -666,6 +666,10 @@ body footer .footer-link a .fa-handshake-angle, html footer .footer-link a .fa-h
   }
   body .menu .menu-name .coeur:hover .fa-solid, html .menu .menu-name .coeur:hover .fa-solid {
     display: block;
+  }
+  body .menu .plates label:hover .prix .selected, html .menu .plates label:hover .prix .selected {
+    width: 61px;
+    color: white;
   }
   body footer, html footer {
     width: 100%;

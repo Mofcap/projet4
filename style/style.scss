@@ -472,7 +472,7 @@ body, html{
         article{
     
         
-       
+            
         
             input[type="checkbox"] {
                 display: none;
@@ -487,8 +487,9 @@ body, html{
             justify-content: space-between;
            align-items: center; 
            background-color: white; 
-           filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
            border-radius: 15.03px;
+           filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+          
            padding: 10px;
            
            
@@ -767,6 +768,7 @@ body, html{
                         article{
                             
                             border-radius: 15px;
+                          
                             
                             img{
                                 height: 231px;
@@ -807,7 +809,16 @@ body, html{
                     .coeur:hover .fa-solid {
                         display: block;
                     }
+                    
                 }
+                .plates{
+                    label:hover .prix .selected{
+                        width: 61px;
+                        color: white;
+                       
+                    }
+                    
+                    }
             }
             footer{
                 width: 100%;
