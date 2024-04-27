@@ -300,22 +300,22 @@ body, html{
                     
                     
                     }
-                .fa-solid{
-                    display: none;
-                    font-size: 24px;
-                    color: transparent;
-                    background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
-                    -webkit-background-clip: text;
-                    background-clip: text;animation: live 3s forwards;
-                }   
-                @keyframes live {
-                    0% {
-                        clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
+                    .fa-solid{
+                        display: none;
+                        font-size: 24px;
+                        color: transparent;
+                        background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
+                        -webkit-background-clip: text;
+                        background-clip: text;animation: live 2s infinite;
+                    }   
+                    @keyframes live {
+                        0% {
+                            clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
+                        }
+                        100% {
+                            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                        }
                     }
-                    100% {
-                        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                    }
-                }
                 
     
                
@@ -399,23 +399,22 @@ body, html{
                 
                 
                 }
-            .fa-solid{
-                display: none;
-                font-size: 24px;
-                color: transparent;
-                background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                animation: live 3s forwards;
-            }   
-            @keyframes live {
-                0% {
-                    clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
+                .fa-solid{
+                    display: none;
+                    font-size: 24px;
+                    color: transparent;
+                    background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
+                    -webkit-background-clip: text;
+                    background-clip: text;animation: live 2s infinite;
+                }   
+                @keyframes live {
+                    0% {
+                        clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
+                    }
+                    100% {
+                        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                    }
                 }
-                100% {
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                }
-            }
             
 
            

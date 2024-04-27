@@ -266,12 +266,12 @@ body .restaurants .card .click article .descript .fa-solid, html .restaurants .c
   background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  animation: live 3s forwards;
+  animation: live 2s infinite;
 }
 @keyframes live {
   0% {
-    -webkit-clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
-            clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
+    -webkit-clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
+            clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
   }
   100% {
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -341,12 +341,12 @@ body .menu .menu-name .fa-solid, html .menu .menu-name .fa-solid {
   background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  animation: live 3s forwards;
+  animation: live 2s infinite;
 }
 @keyframes live {
   0% {
-    -webkit-clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
-            clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 100% 0%);
+    -webkit-clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
+            clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
   }
   100% {
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
