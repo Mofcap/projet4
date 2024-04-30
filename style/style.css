@@ -286,6 +286,7 @@ html .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label
 html .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-solid,
 html .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
+  animation: live 2s forwards;
 }
 body .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-regular,
 body .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-regular,
@@ -361,6 +362,7 @@ html .menu .menu-name #coeurCheckbox2:checked ~ label .fa-solid,
 html .menu .menu-name #coeurCheckbox3:checked ~ label .fa-solid,
 html .menu .menu-name #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
+  animation: live 2s forwards;
 }
 body .menu .menu-name #coeurCheckbox1:checked ~ label .fa-regular,
 body .menu .menu-name #coeurCheckbox2:checked ~ label .fa-regular,
