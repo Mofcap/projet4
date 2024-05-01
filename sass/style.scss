@@ -298,7 +298,7 @@ body, html{
                 .fa-regular{
                     font-size: 24px; 
                     
-                    
+                    animation: live 3s forwards;
                     }
                     .fa-solid{
                         display: none;
@@ -306,14 +306,14 @@ body, html{
                         color: transparent;
                         background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
                         -webkit-background-clip: text;
-                        background-clip: text;animation: live 2s infinite;
+                        background-clip: text;animation: live 3s forwards;
                     }   
                     @keyframes live {
                         0% {
-                            clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
+                            opacity: 0;
                         }
                         100% {
-                            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                            opacity: 1;
                         }
                     }
                 
@@ -324,7 +324,7 @@ body, html{
     #coeurCheckbox3:checked ~ label .fa-solid,
     #coeurCheckbox4:checked ~ label .fa-solid {
         display: block;
-        animation: live 2s forwards;
+        
     }
     #coeurCheckbox1:checked ~ label .fa-regular,
     #coeurCheckbox2:checked ~ label .fa-regular,
@@ -396,7 +396,7 @@ body, html{
             
             .fa-regular{
                 font-size: 24px; 
-               
+               animation: live 3s forwards;
                 
                 
                 }
@@ -406,14 +406,14 @@ body, html{
                     color: transparent;
                     background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
                     -webkit-background-clip: text;
-                    background-clip: text;animation: live 2s infinite;
+                    background-clip: text;animation: live 3s forwards;
                 }   
                 @keyframes live {
                     0% {
-                        clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
+                        opacity: 0;
                     }
                     100% {
-                        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                        opacity: 1;
                     }
                 }
             
@@ -424,7 +424,7 @@ body, html{
 #coeurCheckbox3:checked ~ label .fa-solid,
 #coeurCheckbox4:checked ~ label .fa-solid {
     display: block;
-    animation: live 2s forwards;
+    
 }
 #coeurCheckbox1:checked ~ label .fa-regular,
 #coeurCheckbox2:checked ~ label .fa-regular,

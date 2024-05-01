@@ -258,6 +258,7 @@ body .restaurants .card .click article .descript .coeur, html .restaurants .card
 }
 body .restaurants .card .click article .descript .fa-regular, html .restaurants .card .click article .descript .fa-regular {
   font-size: 24px;
+  animation: live 3s forwards;
 }
 body .restaurants .card .click article .descript .fa-solid, html .restaurants .card .click article .descript .fa-solid {
   display: none;
@@ -266,16 +267,14 @@ body .restaurants .card .click article .descript .fa-solid, html .restaurants .c
   background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  animation: live 2s infinite;
+  animation: live 3s forwards;
 }
 @keyframes live {
   0% {
-    -webkit-clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
-            clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
+    opacity: 0;
   }
   100% {
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    opacity: 1;
   }
 }
 body .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-solid,
@@ -286,7 +285,6 @@ html .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label
 html .restaurants .card .click article .descript #coeurCheckbox3:checked ~ label .fa-solid,
 html .restaurants .card .click article .descript #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
-  animation: live 2s forwards;
 }
 body .restaurants .card .click article .descript #coeurCheckbox1:checked ~ label .fa-regular,
 body .restaurants .card .click article .descript #coeurCheckbox2:checked ~ label .fa-regular,
@@ -334,6 +332,7 @@ body .menu .menu-name input[type=checkbox], html .menu .menu-name input[type=che
 }
 body .menu .menu-name .fa-regular, html .menu .menu-name .fa-regular {
   font-size: 24px;
+  animation: live 3s forwards;
 }
 body .menu .menu-name .fa-solid, html .menu .menu-name .fa-solid {
   display: none;
@@ -342,16 +341,14 @@ body .menu .menu-name .fa-solid, html .menu .menu-name .fa-solid {
   background-image: radial-gradient(circle, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  animation: live 2s infinite;
+  animation: live 3s forwards;
 }
 @keyframes live {
   0% {
-    -webkit-clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
-            clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 50% 0%);
+    opacity: 0;
   }
   100% {
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    opacity: 1;
   }
 }
 body .menu .menu-name #coeurCheckbox1:checked ~ label .fa-solid,
@@ -362,7 +359,6 @@ html .menu .menu-name #coeurCheckbox2:checked ~ label .fa-solid,
 html .menu .menu-name #coeurCheckbox3:checked ~ label .fa-solid,
 html .menu .menu-name #coeurCheckbox4:checked ~ label .fa-solid {
   display: block;
-  animation: live 2s forwards;
 }
 body .menu .menu-name #coeurCheckbox1:checked ~ label .fa-regular,
 body .menu .menu-name #coeurCheckbox2:checked ~ label .fa-regular,
